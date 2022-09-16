@@ -33,10 +33,7 @@ if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
 
-Vue.use(Element, {
-  size: Cookies.get('size') || 'medium', // set element-ui default size
-  locale: enLang // 如果使用中文，无需设置，请删除
-})
+Vue.use(Element, { size: 'small' })
 
 // register global utility filters
 Object.keys(filters).forEach(key => {
